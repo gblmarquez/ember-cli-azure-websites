@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TestAzure</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/test-azure.css">
+  </head>
+  <body>
+    <script>
+      window.TestAzureENV = {{ENV}};
+      window.EmberENV = window.TestAzureENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/test-azure.js"></script>
+    <script>
+      window.TestAzure = require('test-azure/app')['default'].create(TestAzureENV.APP);
+    </script>
+  </body>
+</html>
